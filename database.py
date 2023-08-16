@@ -22,3 +22,13 @@ class Database(Convert):
             self.data.append(book_email)
 
         return self.data
+
+    def when_was_return_date(self):
+        date_from_db = []
+        self.cursor.execute('SELECT return_at FROM books')
+        for book in self.cursor.fetchall():
+            date_from_db.append(book[0])
+
+        dates = [self.convert_to_date(date) for date in date_from_db]
+
+        return dates

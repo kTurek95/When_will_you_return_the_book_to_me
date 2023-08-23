@@ -1,3 +1,5 @@
+"""module with Database class tests"""
+
 from datetime import datetime
 import datetime
 import sqlite3
@@ -5,6 +7,9 @@ from database import Database
 
 
 def create_database():
+    """
+    Creates a SQLite database for the library system and inserts sample data.
+    """
     connection = sqlite3.connect('library.db')
     cursor = connection.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS books(
@@ -29,11 +34,17 @@ def create_database():
 
 
 def remove_database():
+    """
+    Removes the SQLite database file.
+    """
     import os
     os.remove('library.db')
 
 
 def test_check_if_the_return_date_of_the_book_has_passed():
+    """
+   Tests the check_if_the_return_date_of_the_book_has_passed method of the Database class.
+   """
     create_database()
     today = datetime.date(2023, 8, 8)
     expected_emails = [
@@ -48,6 +59,9 @@ def test_check_if_the_return_date_of_the_book_has_passed():
 
 
 def test_len_check_if_the_return_date_of_the_book_has_passed():
+    """
+    Tests the length of the output from the check_if_the_return_date_of_the_book_has_passed method.
+    """
     create_database()
     library = Database()
     library.create_connection('library.db')
@@ -56,6 +70,9 @@ def test_len_check_if_the_return_date_of_the_book_has_passed():
 
 
 def test_when_was_return_date():
+    """
+    Tests the when_was_return_date method of the Database class.
+    """
     create_database()
     expected_outcome = [
         datetime.date(2023, 8, 1),
@@ -69,6 +86,9 @@ def test_when_was_return_date():
 
 
 def test_len_when_was_return_date():
+    """
+   Tests the length of the output from the when_was_return_date method.
+   """
     create_database()
     library = Database()
     library.create_connection('library.db')

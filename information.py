@@ -29,3 +29,13 @@ class Information(Database):
 
         return delay_dates
 
+    def number_of_delay_days(self, today=None):
+        if today is None:
+            today = datetime.today().date()
+        delay = self.only_delay_dates(today)
+        delay_days = []
+        for date in delay:
+            days_delay = today - date
+            delay_days.append(days_delay.days)
+
+        return delay_days

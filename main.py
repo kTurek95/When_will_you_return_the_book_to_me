@@ -1,3 +1,13 @@
+"""
+Main module for sending an email using the Message class.
+
+Usage:
+    Run this module directly to send an email.
+
+Example:
+    $ python main.py
+"""
+
 import os
 import socket
 
@@ -5,6 +15,16 @@ from message import Message
 
 
 def main():
+    """
+    This function checks if the specified database file exists, creates a connection to it,
+    and attempts to send an email using the Message class.
+
+    Raises:
+        Exception: If the email sending process fails.
+
+    Returns:
+        None
+    """
     db_file = 'Information.db'
 
     if not os.path.isfile(db_file):

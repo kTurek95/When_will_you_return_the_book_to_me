@@ -25,8 +25,8 @@ def create_database():
         ('random@email.com', 'randomAuthor', 'randomBook', '2023-08-03'),
     ]
 
-    cursor.executemany('INSERT INTO books('
-                       'email, author, book_title, return_at)'
+    cursor.executemany('INSERT INTO books'
+                       '(email, author, book_title, return_at)'
                        ' VALUES (?, ?, ?, ?)', sample_data,)
 
     connection.commit()

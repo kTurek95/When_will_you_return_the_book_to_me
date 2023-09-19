@@ -10,7 +10,6 @@ Example:
 
 import os
 import socket
-
 from message import Message
 
 
@@ -25,7 +24,8 @@ def main():
     Returns:
         None
     """
-    db_file = 'Information.db'
+
+    db_file = 'database.db'
 
     if not os.path.isfile(db_file):
         print('The specified database file does not exist.')

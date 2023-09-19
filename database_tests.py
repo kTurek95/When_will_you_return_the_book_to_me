@@ -1,6 +1,6 @@
 """module with Database class tests"""
 
-from datetime import datetime
+import os
 import datetime
 import sqlite3
 from database import Database
@@ -37,7 +37,6 @@ def remove_database():
     """
     Removes the SQLite database file.
     """
-    import os
     os.remove('library.db')
 
 

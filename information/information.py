@@ -11,7 +11,7 @@ Classes:
 """
 
 from datetime import datetime
-from database import Database
+from database.database import Database
 
 
 class Information(Database):

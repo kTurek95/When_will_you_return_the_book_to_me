@@ -14,7 +14,7 @@ import unittest
 from unittest.mock import patch
 from datetime import datetime
 import datetime
-from message import Message
+from message.message import Message
 from database.database_tests import create_database, remove_database
 
 

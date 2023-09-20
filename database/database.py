@@ -2,7 +2,7 @@
 
 import sqlite3
 from datetime import datetime
-from convert import Convert
+from convert.convert import Convert
 
 
 class Database(Convert):

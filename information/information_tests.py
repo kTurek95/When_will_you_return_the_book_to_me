@@ -12,7 +12,7 @@ Classes:
 import datetime
 import unittest
 from information import Information
-from database_tests import create_database, remove_database
+from database.database_tests import create_database, remove_database
 
 
 class TestInformation(unittest.TestCase):

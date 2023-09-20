@@ -1,4 +1,20 @@
+"""
+Module for managing and manipulating a database of books.
+
+This module provides functionalities to create a 'books' table in an SQLite database
+and to insert predefined book records into this table.
+"""
+
+
 def create_table(connection):
+    """
+    Create a table named 'books' in the database connected to the given connection.
+
+    Args:
+        connection (sqlite3.Connection): The connection object to the SQLite database.
+
+    """
+
     table = '''CREATE TABLE IF NOT EXISTS books(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT,
@@ -13,9 +29,16 @@ def create_table(connection):
 
 
 def insert_into_table(connection):
+    """
+    Insert predefined book records into the 'books' table of the database
+     connected to the given connection.
+
+    Args:
+        connection (sqlite3.Connection): The connection object to the SQLite database.
+    """
     cursor = connection.cursor()
 
-    cursor.execute('''INSERT INTO books 
+    cursor.execute('''INSERT INTO books
     (email, author, book_title, return_at) VALUES
     (
     'andy@test.email',

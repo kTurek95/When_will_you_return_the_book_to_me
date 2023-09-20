@@ -15,7 +15,7 @@ from unittest.mock import patch
 from datetime import datetime
 import datetime
 from message import Message
-from database_tests import create_database, remove_database
+from database.database_tests import create_database, remove_database
 
 
 class TestMessage(unittest.TestCase):

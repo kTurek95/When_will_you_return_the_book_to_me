@@ -1,6 +1,6 @@
 """Module with tests for Convert class"""
 import datetime
-from convert import Convert
+from convert.convert import Convert
 
 
 def test_convert_to_date():

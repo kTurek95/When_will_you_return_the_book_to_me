@@ -13,7 +13,7 @@ from os import getenv
 from string import Template
 from datetime import datetime
 from dotenv import load_dotenv
-from information import Information
+from information.information import Information
 
 load_dotenv()
 

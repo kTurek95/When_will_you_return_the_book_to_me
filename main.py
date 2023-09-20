@@ -10,7 +10,7 @@ Example:
 
 import os
 import socket
-from message import Message
+from message.message import Message
 
 
 def main():

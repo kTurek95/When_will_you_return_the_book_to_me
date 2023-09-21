@@ -3,7 +3,7 @@
 import os
 import datetime
 import sqlite3
-from database import Database
+from database.database import Database
 
 
 def create_database():

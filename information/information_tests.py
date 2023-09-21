@@ -11,7 +11,7 @@ Classes:
 
 import datetime
 import unittest
-from information import Information
+from information.information import Information
 from database.database_tests import create_database, remove_database
 
 

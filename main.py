@@ -10,7 +10,10 @@ Example:
 
 import os
 import socket
+import sqlite3
+
 from message.message import Message
+from create_database import create_table, insert_into_table
 
 
 def main():
@@ -29,6 +32,14 @@ def main():
 
     if not os.path.isfile(db_file):
         print('The specified database file does not exist.')
+        user_answer = input('If you want to create a database, press 1 if not press 0: ')
+        if user_answer == '1':
+            with sqlite3.connect('database.db') as connection:
+                create_table(connection)
+                insert_into_table(connection)
+                print('The database has been created')
+        else:
+            quit()
         return
 
     message = Message()

@@ -11,7 +11,6 @@ Example:
 import os
 import socket
 import sqlite3
-
 from message.message import Message
 from create_database import create_table, insert_into_table
 
@@ -40,7 +39,6 @@ def main():
                 print('The database has been created')
         else:
             quit()
-        return
 
     message = Message()
     message.create_connection(db_file)

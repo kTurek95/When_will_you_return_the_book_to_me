@@ -40,8 +40,12 @@ def main():
         else:
             quit()
 
-    message = Message()
-    message.create_connection(db_file)
+    if not os.path.exists('.env'):
+        print('Please create .env file')
+        quit()
+    else:
+        message = Message()
+        message.create_connection(db_file)
     try:
         if not message.send_mail():
             raise Exception

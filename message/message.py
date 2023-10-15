@@ -65,8 +65,8 @@ class Message(Information):
         """
         smtp_server = getenv('SMTP_SERVER')
         smtp_port = int(getenv('SMTP_PORT'))
-        smtp_username = getenv('USERNAME')
-        smtp_password = getenv('PASSWORD')
+        smtp_username = getenv('MAIL_USERNAME')
+        smtp_password = getenv('MAIL_PASSWORD')
         sender = getenv('SENDER')
 
         return smtp_server, smtp_port, smtp_username, smtp_password, sender

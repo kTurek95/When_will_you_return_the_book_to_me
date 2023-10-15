@@ -7,9 +7,7 @@ The program is used to check in the database whether the customer has returned t
 1. Make sure you have Python 3.x installed on your system.
 2. Clone this repository to your local machine.
 3. Install the required dependencies by running:
-- pip3 install python-dotenv
-- pip3 install load_dotenv
-- pip3 install sqlite3
+- pip install -r requirements.txt
 
 ## Usage
 
@@ -37,7 +35,9 @@ This module is responsible for the database. It has two functions; one creates t
 
 This application requires certain environment variables to run correctly. These variables should be defined in a **.env** file at the root of your project.
 Create a **.env file**: Start by copying the **.env.dist** file provided in the project root:
-- cp .env.dist .env
+- cp .env.dist .env on MacOs
+- copy .env.dist .env on Windows
+- then you need to add your email details and save it
 
 ## Support
 
@@ -45,10 +45,7 @@ If you encounter any issues with my software, please reach out to me:
 - Email: k.turek1995@gmail.com
 
 ## Dependencies
-To run this software, you'll need the following libraries and tools:
-- sqlite3
-- dotenv
-- load_dotenv
+To run this software, you'll need the libraries and tools listed in requirements.txt
 
 ## License
 
